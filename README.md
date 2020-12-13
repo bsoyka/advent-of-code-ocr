@@ -20,7 +20,7 @@ Put simply, it converts this to `ABC`:
 This module can be installed from PyPI:
 
 ```sh
-$ pip install advent_of_code_ocr
+$ pip install advent-of-code-ocr
 ```
 
 # Usage

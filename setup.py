@@ -20,4 +20,9 @@ setup(
     license=about["__license__"],
     packages=["advent_of_code_ocr"],
     install_requires=["numpy==1.19.4"],
+    url="https://github.com/bsoyka/advent-of-code-ocr",
+    project_urls={
+        "Bug Tracker": "https://github.com/bsoyka/advent-of-code-ocr/issues",
+        "Source Code": "https://github.com/bsoyka/advent-of-code-ocr",
+    },
 )

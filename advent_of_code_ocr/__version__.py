@@ -1,0 +1,7 @@
+__title__ = "advent-of-code-ocr"
+__description__ = "Convert Advent of Code ASCII art"
+__version__ = "0.1.0"
+__author__ = "Ben Soyka"
+__author_email__ = "bensoyka@icloud.com"
+__license__ = "MIT"
+__copyright__ = "Copyright (c) 2020-present Benjamin Soyka"

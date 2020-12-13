@@ -1,2 +1,4 @@
 .
+black
+isort
 pytest==6.2.0

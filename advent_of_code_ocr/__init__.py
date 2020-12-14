@@ -10,13 +10,14 @@ def convert_6(input_text: str, *, fill_pixel: str = "#", empty_pixel: str = ".")
 
     array = np.array([[int(char) for char in row] for row in input_text.split("\n")])
 
-    rows, _ = array.shape
+    rows, cols = array.shape
 
     if rows != 6:
         raise ValueError("incorrect number of rows (expected 6)")
 
-    m = array.any(axis=0)
-    indices = [list(g) for k, g in groupby(np.arange(len(m)), lambda x: m[x] != 0) if k]
+    indices = [
+        list(g) for k, g in groupby(range(cols), lambda x: (x + 1) % 5 != 0) if k
+    ]
 
     result = ""
 

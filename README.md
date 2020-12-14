@@ -37,8 +37,6 @@ print(convert_6(" $$ \n$  $\n$  $\n$$$$\n$  $\n$  $", fill_pixel="$", empty_pixe
 # A
 ```
 
-Note that letters must be separated by one or more columns of empty pixels, as they are displayed in Advent of Code answers that way.
-
 ---
 
 Advent of Code is a registered trademark of Eric K Wastl in the United States.

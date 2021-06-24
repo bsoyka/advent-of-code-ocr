@@ -1,0 +1,36 @@
+name: Bug report
+description: Create a report to help us improve
+labels: [bug]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to fill out this bug report!
+  - type: textarea
+    id: description
+    attributes:
+      label: Bug description
+      description: A clear and concise description of what the bug is
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Reproducing the bug
+      description: Provide a minimal, reproducible example
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expectations vs. reality
+      description: A clear and concise description of what you expected to happen
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: Advent of Code OCR version
+      description: What version(s) this bug occurs on
+    validations:
+      required: true

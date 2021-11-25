@@ -1,8 +1,12 @@
+"""Convert Advent of Code ASCII art"""
+
 from itertools import groupby
 
 import numpy as np
 
 from .characters import ALPHABET_6
+
+__version__ = "0.2.0"
 
 
 def convert_6(input_text: str, *, fill_pixel: str = "#", empty_pixel: str = "."):

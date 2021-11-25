@@ -1,0 +1,70 @@
+### BUILD CONFIG ###
+
+[build-system]
+build-backend = "flit_core.buildapi"
+requires = ["flit_core >=3.2,<4"]
+
+[project]
+authors = [{name = "Ben Soyka", email = "bensoyka@icloud.com"}]
+classifiers = [
+  "Development Status :: 5 - Production/Stable",
+  "Intended Audience :: Developers",
+  "Natural Language :: English",
+  "License :: OSI Approved :: MIT License",
+  "Programming Language :: Python",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.7",
+  "Programming Language :: Python :: 3.8",
+  "Programming Language :: Python :: 3.9",
+  "Programming Language :: Python :: 3.10",
+]
+dependencies = ["numpy==1.21.4"]
+dynamic = ["version", "description"]
+license = {file = "LICENSE"}
+name = "advent-of-code-ocr"
+readme = "README.md"
+requires-python = "~=3.7"
+
+[tool.flit.module]
+name = "advent_of_code_ocr"
+
+[project.urls]
+Changelog = "https://github.com/bsoyka/advent-of-code-ocr/releases"
+Source = "https://github.com/bsoyka/advent-of-code-ocr"
+
+### TOOLS ###
+
+[tool.black]
+line-length = 79
+
+[tool.coverage.run]
+source = ["advent_of_code_ocr"]
+
+[tool.coverage.report]
+omit = ["tests/*"]
+
+[tool.isort]
+line_length = 79
+profile = "black"
+
+[tool.poe.tasks]
+_black = "black ."
+_isort = "isort ."
+coverage = "coverage run -m pytest"
+format = ["_black", "_isort"]
+install = "flit install"
+test = "tox"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[tool.tox]
+legacy_tox_ini = """
+[tox]
+envlist = py37,py38,py39,py310
+isolated_build = True
+
+[testenv]
+deps = pytest
+commands = pytest
+"""

@@ -27,8 +27,9 @@ def convert_6(input_text: str, *, fill_pixel: str = "#", empty_pixel: str = ".")
 
     for index in indices:
         string = "\n".join(
-            ["".join([str(char) for char in row]) for row in array[:, index]]
+            "".join(str(char) for char in row) for row in array[:, index]
         )
+
         string = string.replace("0", ".").replace("1", "#")
 
         letter = ALPHABET_6[string]

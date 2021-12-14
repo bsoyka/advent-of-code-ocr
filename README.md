@@ -1,6 +1,6 @@
 # Advent of Code® OCR
 
-This Python module helps with converting Advent of Code ASCII art letters into plain characters. At the moment, it only supports 6-pixel-tall characters as seen in 2016 Day 8 and 2019 Days 8 and 11.
+This Python module helps with converting Advent of Code ASCII art letters into plain characters. At the moment, it only supports 6-pixel-tall characters as seen in 2016 Day 8, 2019 Days 8 and 11, and 2021 Day 13.
 
 Support for 10-pixel-tall characters (2018 Day 10) is coming soon.
 

@@ -18,7 +18,7 @@ classifiers = [
   "Programming Language :: Python :: 3.9",
   "Programming Language :: Python :: 3.10",
 ]
-dependencies = ["numpy==1.21.4"]
+dependencies = []
 dynamic = ["version", "description"]
 license = {file = "LICENSE"}
 name = "advent-of-code-ocr"

@@ -6,7 +6,7 @@ from collections.abc import Sequence
 
 from .characters import ALPHABET_6
 
-__version__ = "0.2.0"
+__version__ = "1.0.0"
 
 
 def convert_6(

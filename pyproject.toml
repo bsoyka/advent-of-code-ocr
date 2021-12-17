@@ -32,6 +32,9 @@ name = "advent_of_code_ocr"
 Changelog = "https://github.com/bsoyka/advent-of-code-ocr/releases"
 Source = "https://github.com/bsoyka/advent-of-code-ocr"
 
+[project.optional-dependencies]
+test = ["numpy", "pytest"]
+
 ### TOOLS ###
 
 [tool.black]

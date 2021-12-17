@@ -24,7 +24,7 @@ jobs:
                   pip install flit pytest
             - name: Install module
               run: |
-                  flit install
+                  flit install --extras test
             - name: Run tests
               run: |
                   pytest
@@ -44,7 +44,7 @@ jobs:
                   pip install flit pytest coverage
             - name: Install module
               run: |
-                  flit install
+                  flit install --extras test
             - name: Run tests
               run: |
                   coverage run -m pytest

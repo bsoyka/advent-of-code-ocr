@@ -1,10 +1,13 @@
 # Advent of Code® OCR
 
-This Python module helps with converting [Advent of Code](https://adventofcode.com/) ASCII art letters into plain characters. At the moment, it only supports 6-pixel-tall characters as seen in 2016 Day 8, 2019 Days 8 and 11, and 2021 Day 13.
+This Python module converts [Advent of Code](https://adventofcode.com/) ASCII
+art letters to plain characters.
 
-Support for 10-pixel-tall characters (2018 Day 10) is coming soon.
+At the moment, it supports 6-pixel-tall characters as seen in 2016 Day 8, 2019
+Days 8 and 11, and 2021 Day 13. (Support for 10-pixel-tall characters, as seen
+in 2018 Day 10, is coming soon.)
 
-Put simply, it converts this to `ABC`:
+Put simply, it converts something like this to plain text:
 
 ```txt
  ██  ███   ██
@@ -15,17 +18,27 @@ Put simply, it converts this to `ABC`:
 █  █ ███   ██
 ```
 
-# Installation
+[![Downloads](https://pepy.tech/badge/advent-of-code-ocr)](https://pepy.tech/project/advent-of-code-ocr)
+[![Supported Versions](https://img.shields.io/pypi/pyversions/advent-of-code-ocr.svg)](https://pypi.org/project/advent-of-code-ocr)
+[![Testing](https://img.shields.io/github/workflow/status/bsoyka/advent-of-code-ocr/Test%20with%20pytest?label=tests)](https://github.com/bsoyka/advent-of-code-ocr/actions?query=workflow%3A%22Test+with+pytest%22)
+[![License](https://img.shields.io/pypi/l/advent-of-code-ocr)](https://github.com/bsoyka/advent-of-code-ocr/blob/master/LICENSE)
+[![Version](https://img.shields.io/pypi/v/advent-of-code-ocr?label=latest)](https://pypi.org/project/advent-of-code-ocr)
 
-This module can be installed from PyPI:
+## Installation
+
+Advent of Code OCR is available on PyPI:
 
 ```sh
 $ pip install advent-of-code-ocr
 ```
 
-# Usage
+Advent of Code OCR officially supports Python 3.7+.
 
-Using this module is pretty easy. By default, this module recognizes `#` as a filled pixel and `.` as an empty pixel. However, you can change this using the `fill_pixel` and `empty_pixel` keywork arguments respectively.
+## API Reference
+
+By default, this module recognizes `#` as a filled pixel and `.` as an empty
+pixel. However, you can change this using the `fill_pixel` and `empty_pixel`
+keywork arguments respectively.
 
 ```py
 from advent_of_code_ocr import convert_6

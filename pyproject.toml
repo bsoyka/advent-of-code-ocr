@@ -18,7 +18,6 @@ classifiers = [
   "Programming Language :: Python :: 3.9",
   "Programming Language :: Python :: 3.10",
 ]
-dependencies = []
 dynamic = ["version", "description"]
 license = {file = "LICENSE"}
 name = "advent-of-code-ocr"
@@ -68,6 +67,7 @@ envlist = py37,py38,py39,py310
 isolated_build = True
 
 [testenv]
-deps = pytest
+deps = .
 commands = pytest
+extras = test
 """

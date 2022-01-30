@@ -37,7 +37,6 @@ def convert_array_6(
 
 def _convert_6(array: list[list[str]]) -> str:
     """Convert a prepared height 6 array to characters"""
-
     # Validate input
     rows, cols = len(array), len(array[0])
     if any(len(row) != cols for row in array):

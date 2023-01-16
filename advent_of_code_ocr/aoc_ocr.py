@@ -12,7 +12,7 @@ def convert_6(
 ) -> str:
     """Convert height 6 text to characters"""
     input_text = input_text.replace(fill_pixel, "#").replace(empty_pixel, ".")
-    prepared_array = [list(line) for line in input_text.split("\n")]
+    prepared_array = [list(line) for line in input_text.split("\n") if line]
     return _convert_6(prepared_array)
 
 
@@ -38,6 +38,7 @@ def _convert_6(array: list[list[str]]) -> str:
     # Validate input
     rows, cols = len(array), len(array[0])
     if any(len(row) != cols for row in array):
+        print(array)
         raise ValueError("all rows should have the same number of columns")
     if rows != 6:
         raise ValueError("incorrect number of rows (expected 6)")

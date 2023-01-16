@@ -3,7 +3,7 @@ from re import escape
 import numpy as np
 from pytest import mark, raises
 
-from advent_of_code_ocr import convert_6, convert_array_6
+from advent_of_code_ocr.aoc_ocr import convert_6, convert_array_6
 from advent_of_code_ocr.characters import ALPHABET_6
 
 

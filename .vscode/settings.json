@@ -5,7 +5,6 @@
     "reflowMarkdown.preferredLineLength": 80,
     "[python]": {
         "editor.rulers": [
-            72,
             79
         ]
     }

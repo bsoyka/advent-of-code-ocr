@@ -1,6 +1,7 @@
-from advent_of_code_ocr.main import parse_args
 from pytest import mark
+
 from advent_of_code_ocr.aoc_ocr import convert_6
+from advent_of_code_ocr.main import parse_args
 
 
 @mark.parametrize(

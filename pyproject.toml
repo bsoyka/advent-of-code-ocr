@@ -1,73 +1,66 @@
-### BUILD CONFIG ###
-
-[build-system]
-build-backend = "flit_core.buildapi"
-requires = ["flit_core >=3.2,<4"]
-
 [project]
-authors = [{name = "Ben Soyka", email = "bensoyka@icloud.com"}]
-classifiers = [
-  "Development Status :: 5 - Production/Stable",
-  "Intended Audience :: Developers",
-  "Natural Language :: English",
-  "License :: OSI Approved :: MIT License",
-  "Programming Language :: Python",
-  "Programming Language :: Python :: 3",
-  "Programming Language :: Python :: 3.7",
-  "Programming Language :: Python :: 3.8",
-  "Programming Language :: Python :: 3.9",
-  "Programming Language :: Python :: 3.10",
-]
-dynamic = ["version", "description"]
-license = {file = "LICENSE"}
 name = "advent-of-code-ocr"
+version = "1.0.0"
+description = "A library to parse Advent of Code ASCII art"
+authors = [{ name = "Ben Soyka", email = "hello@bsoyka.me" }]
 readme = "README.md"
-requires-python = "~=3.7"
+requires-python = ">=3.10"
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Intended Audience :: Developers",
+    "Natural Language :: English",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+]
 
-[tool.flit.module]
-name = "advent_of_code_ocr"
+[dependency-groups]
+dev = [
+    "numpy>=2.0.2",
+    "poethepoet>=0.36.0",
+    "pre-commit>=4.2.0",
+    "pytest>=8.4.1",
+    "ruff>=0.12.5",
+]
 
 [project.urls]
 Changelog = "https://github.com/bsoyka/advent-of-code-ocr/releases"
 Source = "https://github.com/bsoyka/advent-of-code-ocr"
 
-[project.optional-dependencies]
-test = ["numpy", "pytest"]
-
-### TOOLS ###
-
-[tool.black]
-line-length = 79
-
-[tool.coverage.run]
-source = ["advent_of_code_ocr"]
-
-[tool.coverage.report]
-omit = ["tests/*"]
-
-[tool.isort]
-line_length = 79
-profile = "black"
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
 
 [tool.poe.tasks]
-_black = "black ."
-_isort = "isort ."
-coverage = "coverage run -m pytest"
-format = ["_black", "_isort"]
-install = "flit install"
-test = "tox"
+_format = "ruff format"
+_lint = "ruff check --fix"
+pc = "pre-commit run --all-files"
+ruff = ["_lint", "_format"]
 
-[tool.pytest.ini_options]
-testpaths = ["tests"]
+[tool.ruff]
+preview = true
 
-[tool.tox]
-legacy_tox_ini = """
-[tox]
-envlist = py37,py38,py39,py310
-isolated_build = True
+[tool.ruff.format]
+docstring-code-format = true
+line-ending = "lf"
+quote-style = "single"
 
-[testenv]
-deps = .
-commands = pytest
-extras = test
-"""
+[tool.ruff.lint]
+select = ["ALL"]
+ignore = [
+    "CPY001", # Don't require file-level copyright notices.
+    "COM812", # Ignore trailing commas. Causes conflicts between checker and formatter.
+    "PLR6301" # Ignore making methods into functions, class methods, or static methods.
+]
+pydocstyle.convention = "google"
+flake8-quotes.inline-quotes = "single"
+
+[tool.ruff.lint.per-file-ignores]
+"*_test.py" = ["PLR2004", "S101"] # Allow magic values and assertions in tests.
+
+[tool.mypy]
+strict = true

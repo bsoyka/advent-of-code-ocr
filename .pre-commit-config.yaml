@@ -1,0 +1,36 @@
+repos:
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v5.0.0
+    hooks:
+      - id: check-ast
+      - id: check-shebang-scripts-are-executable
+      - id: check-toml
+      - id: end-of-file-fixer
+      - id: forbid-submodules
+      - id: name-tests-test
+      - id: trailing-whitespace
+  - repo: https://github.com/astral-sh/ruff-pre-commit
+    rev: v0.12.5
+    hooks:
+      - id: ruff-check
+        args:
+          - --fix
+      - id: ruff-format
+  - repo: https://github.com/astral-sh/uv-pre-commit
+    rev: 0.7.20
+    hooks:
+      - id: uv-lock
+  - repo: https://github.com/pre-commit/mirrors-mypy
+    rev: 850d8bf806620ef89a99381c5cf5ea2c1ea826dd
+    hooks:
+      - id: mypy
+        additional_dependencies:
+          - pytest
+ci:
+  autofix_commit_msg: "style: auto fixes from pre-commit hooks"
+  autofix_prs: true
+  autoupdate_branch: ''
+  autoupdate_commit_msg: "ci(pre-commit): auto-update hooks"
+  autoupdate_schedule: weekly
+  skip: [ ]
+  submodules: false

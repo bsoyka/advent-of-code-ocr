@@ -20,6 +20,7 @@ classifiers = [
 
 [dependency-groups]
 dev = [
+    "coverage>=7.10.0",
     "numpy>=2.0.2",
     "poethepoet>=0.36.0",
     "pre-commit>=4.2.0",

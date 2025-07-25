@@ -30,3 +30,19 @@ def test_cli_three_letters() -> None:
     result = runner.invoke(convert, [test_input])
     assert result.exit_code == 0
     assert result.output.strip() == 'ABC'
+
+
+def test_cli_from_stdin() -> None:
+    """Test conversion of input from stdin via CLI."""
+    runner = CliRunner()
+    test_input = (
+        '.##..###...##.\n'
+        '#..#.#..#.#..#\n'
+        '#..#.###..#...\n'
+        '####.#..#.#...\n'
+        '#..#.#..#.#..#\n'
+        '#..#.###...##.'
+    )
+    result = runner.invoke(convert, input=test_input)
+    assert result.exit_code == 0
+    assert result.output.strip() == 'ABC'

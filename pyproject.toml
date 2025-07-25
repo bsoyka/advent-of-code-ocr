@@ -23,6 +23,7 @@ dependencies = [
 
 [dependency-groups]
 dev = [
+    "bump-my-version>=1.2.1",
     "coverage>=7.10.0",
     "numpy>=2.0.2",
     "poethepoet>=0.36.0",
@@ -42,6 +43,7 @@ build-backend = "hatchling.build"
 [tool.poe.tasks]
 _format = "ruff format"
 _lint = "ruff check --fix"
+bump = "bump-my-version bump"
 pc = "pre-commit run --all-files"
 ruff = ["_lint", "_format"]
 
@@ -68,3 +70,28 @@ flake8-quotes.inline-quotes = "single"
 
 [tool.mypy]
 strict = true
+
+[tool.bumpversion]
+current_version = "1.0.0"
+parse = "(?P<major>\\d+)\\.(?P<minor>\\d+)\\.(?P<patch>\\d+)"
+serialize = ["{major}.{minor}.{patch}"]
+search = "{current_version}"
+replace = "{new_version}"
+regex = false
+ignore_missing_version = false
+ignore_missing_files = false
+tag = true
+sign_tags = false
+tag_name = "v{new_version}"
+tag_message = "chore: bump {current_version} → {new_version}"
+allow_dirty = false
+commit = true
+message = "chore: bump {current_version} → {new_version}"
+moveable_tags = []
+commit_args = ""
+setup_hooks = []
+pre_commit_hooks = ["uv lock --upgrade-package advent-of-code-ocr", "git add uv.lock"]
+post_commit_hooks = []
+
+[[tool.bumpversion.files]]
+filename = "advent_of_code_ocr/__init__.py"

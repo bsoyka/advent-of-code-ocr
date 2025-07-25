@@ -1,6 +1,6 @@
 [project]
 name = "advent-of-code-ocr"
-version = "1.0.0"
+version = "1.1.0"
 description = "A library to parse Advent of Code ASCII art"
 authors = [{ name = "Ben Soyka", email = "hello@bsoyka.me" }]
 readme = "README.md"
@@ -72,7 +72,7 @@ flake8-quotes.inline-quotes = "single"
 strict = true
 
 [tool.bumpversion]
-current_version = "1.0.0"
+current_version = "1.1.0"
 parse = "(?P<major>\\d+)\\.(?P<minor>\\d+)\\.(?P<patch>\\d+)"
 serialize = ["{major}.{minor}.{patch}"]
 search = "{current_version}"

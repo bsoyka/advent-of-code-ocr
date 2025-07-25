@@ -5,9 +5,9 @@ from re import escape
 import numpy as np
 import pytest
 
-from advent_of_code_ocr import convert_6, convert_array_6
 from advent_of_code_ocr.characters import ALPHABET_6
 from advent_of_code_ocr.exceptions import IncorrectRowCountError
+from advent_of_code_ocr.height_6 import convert_6, convert_array_6
 
 
 @pytest.mark.parametrize(('test_input', 'expected'), ALPHABET_6.items())

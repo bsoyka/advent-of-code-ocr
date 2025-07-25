@@ -18,9 +18,9 @@ def convert(input_text: str | None, fill_pixel: str, empty_pixel: str) -> None:
     input_text = input_text.replace('\\n', '\n')
 
     # Strip trailing whitespace and empty lines
-    input_text = '\n'.join([
+    input_text = '\n'.join(
         line.rstrip() for line in input_text.strip().splitlines() if line.strip()
-    ])
+    )
 
     result = convert_6(input_text, fill_pixel=fill_pixel, empty_pixel=empty_pixel)
     click.echo(result)

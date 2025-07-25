@@ -25,6 +25,7 @@ repos:
     hooks:
       - id: mypy
         additional_dependencies:
+          - click
           - pytest
 ci:
   autofix_commit_msg: "style: auto fixes from pre-commit hooks"

@@ -38,38 +38,7 @@ $ pip install advent-of-code-ocr
 
 Advent of Code OCR officially supports Python 3.10+.
 
-## API Reference
-
-By default, this module recognizes `#` as a filled pixel and `.` as an empty
-pixel. However, you can change this using the `fill_pixel` and `empty_pixel`
-keywork arguments respectively.
-
-```py
-from advent_of_code_ocr import convert_6
-
-print(convert_6(".##.\n#..#\n#..#\n####\n#..#\n#..#"))
-# A
-
-print(convert_6(" $$ \n$  $\n$  $\n$$$$\n$  $\n$  $", fill_pixel="$", empty_pixel=" "))
-# A
-```
-
-You can also convert data that you have in a NumPy array or a nested list:
-
-```py
-from advent_of_code_ocr import convert_array_6
-
-array = [
-    [0, 1, 1, 0, 0, 0, 1, 1, 0, 0, 0, 1, 1, 0],
-    [1, 0, 0, 1, 0, 1, 0, 0, 1, 0, 1, 0, 0, 1],
-    [1, 0, 0, 1, 0, 1, 0, 0, 1, 0, 1, 0, 0, 0],
-    [1, 1, 1, 1, 0, 1, 0, 0, 1, 0, 1, 0, 0, 0],
-    [1, 0, 0, 1, 0, 1, 0, 0, 1, 0, 1, 0, 0, 1],
-    [1, 0, 0, 1, 0, 0, 1, 1, 0, 0, 0, 1, 1, 0],
-]
-print(convert_array_6(array, fill_pixel=1, empty_pixel=0))
-# AOC
-```
+**[See the full documentation for this project on Read the Docs.](https://aoc-ocr.bsoyka.me/en/latest/)**
 
 ---
 

@@ -27,6 +27,7 @@ repos:
         additional_dependencies:
           - click
           - pytest
+          - types-toml
 ci:
   autofix_commit_msg: "style: auto fixes from pre-commit hooks"
   autofix_prs: true

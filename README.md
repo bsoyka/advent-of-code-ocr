@@ -28,13 +28,15 @@ Put simply, it converts something like this to plain text:
 
 ## Installation
 
-Advent of Code OCR is available on PyPI:
+Advent of Code OCR is [available on PyPI](https://pypi.org/project/advent-of-code-ocr/).
+Install it with your preferred package manager:
 
 ```sh
+$ uv add advent-of-code-ocr
 $ pip install advent-of-code-ocr
 ```
 
-Advent of Code OCR officially supports Python 3.7+.
+Advent of Code OCR officially supports Python 3.10+.
 
 ## API Reference
 

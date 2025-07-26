@@ -5,7 +5,7 @@ Advent of Code OCR provides a command-line interface (CLI) for easy interaction 
 
 .. code::
 
-    $ python -m advent-of-code-ocr --help
+    $ python -m advent_of_code_ocr --help
     Usage: python -m advent_of_code_ocr [OPTIONS] [INPUT_TEXT]
 
       Convert height-6 OCR text to readable string.

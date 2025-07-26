@@ -8,6 +8,9 @@ updates:
       interval: "weekly"
     labels:
       - "a: dependencies"
+    commit-message:
+      prefix: "build"
+      include: "scope"
   - package-ecosystem: "github-actions"
     directory: "/"
     schedule:
@@ -15,3 +18,6 @@ updates:
     labels:
       - "a: dependencies"
       - "a: tools"
+    commit-message:
+      prefix: "ci"
+      include: "scope"

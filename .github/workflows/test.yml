@@ -50,8 +50,7 @@ jobs:
 
       - name: Run tests
         run: |
-          uv run coverage run -m pytest
-          uv run coverage xml
+          pytest --cov=advent_of_code_ocr --cov-report=xml
 
       - name: Upload results to Codecov
         uses: codecov/codecov-action@v5

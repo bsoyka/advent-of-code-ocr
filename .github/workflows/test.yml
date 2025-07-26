@@ -4,6 +4,8 @@ on: [ push, pull_request ]
 
 jobs:
   test:
+    name: Run tests with pytest
+
     runs-on: ubuntu-latest
 
     strategy:
@@ -25,6 +27,8 @@ jobs:
         run: uv run pytest
 
   coverage:
+    name: Generate coverage report
+
     runs-on: ubuntu-latest
 
     steps:

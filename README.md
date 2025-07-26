@@ -18,11 +18,13 @@ Put simply, it converts something like this to plain text:
 █  █ ███   ██
 ```
 
-[![Downloads](https://pepy.tech/badge/advent-of-code-ocr)](https://pepy.tech/project/advent-of-code-ocr)
+[![PyPI - Downloads](https://img.shields.io/pypi/dm/advent-of-code-ocr)](https://pypi.org/project/advent-of-code-ocr/)
 [![Supported Versions](https://img.shields.io/pypi/pyversions/advent-of-code-ocr.svg)](https://pypi.org/project/advent-of-code-ocr)
-[![Testing](https://img.shields.io/github/workflow/status/bsoyka/advent-of-code-ocr/Test%20with%20pytest?label=tests)](https://github.com/bsoyka/advent-of-code-ocr/actions?query=workflow%3A%22Test+with+pytest%22)
+[![Testing Status](https://img.shields.io/github/actions/workflow/status/bsoyka/advent-of-code-ocr/test.yml?branch=main&label=tests)](https://github.com/bsoyka/advent-of-code-ocr/actions?query=workflow%3A%22Test+with+pytest%22)
 [![License](https://img.shields.io/pypi/l/advent-of-code-ocr)](https://github.com/bsoyka/advent-of-code-ocr/blob/master/LICENSE)
 [![Version](https://img.shields.io/pypi/v/advent-of-code-ocr?label=latest)](https://pypi.org/project/advent-of-code-ocr)
+[![Codecov](https://codecov.io/github/bsoyka/advent-of-code-ocr/branch/main/graph/badge.svg?token=JLGSYTAVZS)](https://codecov.io/github/bsoyka/advent-of-code-ocr)
+[![GitHub Repo stars](https://img.shields.io/github/stars/bsoyka/advent-of-code-ocr)](https://github.com/bsoyka/advent-of-code-ocr)
 
 ## Installation
 

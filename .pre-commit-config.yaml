@@ -17,11 +17,11 @@ repos:
           - --fix
       - id: ruff-format
   - repo: https://github.com/astral-sh/uv-pre-commit
-    rev: 0.7.20
+    rev: 0.8.3
     hooks:
       - id: uv-lock
   - repo: https://github.com/pre-commit/mirrors-mypy
-    rev: 850d8bf806620ef89a99381c5cf5ea2c1ea826dd
+    rev: v1.17.0
     hooks:
       - id: mypy
         additional_dependencies:

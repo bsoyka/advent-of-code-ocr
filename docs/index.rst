@@ -6,6 +6,7 @@ Advent of Code OCR
 Put simply, it converts something like this to plain text:
 
 .. code-block:: text
+
      ██  ███   ██
     █  █ █  █ █  █
     █  █ ███  █

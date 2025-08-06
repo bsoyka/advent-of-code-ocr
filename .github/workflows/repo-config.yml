@@ -1,0 +1,27 @@
+name: Repo configuration
+
+on:
+  workflow_dispatch:
+
+permissions: {}
+
+jobs:
+  labels:
+    name: Sync labels
+
+    runs-on: ubuntu-latest
+
+    permissions:
+      issues: write
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          sparse-checkout: .github/labels.yml
+
+      - uses: EndBug/label-sync@v2
+        with:
+          config-file: |
+            https://raw.githubusercontent.com/bsoyka/cookiecutters/main/python-library/default-labels.yaml
+            .github/labels.yaml

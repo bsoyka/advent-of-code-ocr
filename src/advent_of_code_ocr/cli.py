@@ -1,5 +1,7 @@
 """Command line interface for the Advent of Code OCR library."""
 
+from __future__ import annotations
+
 import click
 
 from advent_of_code_ocr import convert_6

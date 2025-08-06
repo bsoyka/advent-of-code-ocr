@@ -10,7 +10,7 @@ https://www.sphinx-doc.org/en/master/usage/configuration.html
 from advent_of_code_ocr import __version__
 
 project = 'Advent of Code OCR'
-copyright = '2020-present Benjamin Soyka'  # noqa: A001
+copyright = '2025 Benjamin Soyka'  # noqa: A001
 author = 'Ben Soyka'
 release = __version__
 
@@ -21,7 +21,6 @@ extensions = ['sphinx.ext.autodoc', 'sphinx.ext.napoleon', 'sphinx.ext.viewcode'
 
 templates_path = ['_templates']
 exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']
-
 
 # -- Options for HTML output -------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#options-for-html-output

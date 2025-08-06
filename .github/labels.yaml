@@ -1,0 +1,9 @@
+# Extends configuration at: https://raw.githubusercontent.com/bsoyka/cookiecutters/main/python-library/default-labels.yaml
+
+- name: 'area:cli'
+  color: 80cbc4
+  description: 'Related to the command-line interface'
+
+- name: 'area:core'
+  color: 80cbc4
+  description: 'Related to the core functionality of the project'

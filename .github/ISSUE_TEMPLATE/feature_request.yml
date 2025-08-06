@@ -1,0 +1,25 @@
+name: Request a feature
+description: Suggest an improvement or addition to the project
+labels: ['type:feature']
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to request a feature!
+  - type: textarea
+    attributes:
+      label: Related to a problem?
+      description: Is your feature request related to a problem? If so, please describe.
+  - type: textarea
+    attributes:
+      label: Preferred solution
+      description: Give a clear and concise description of what you'd like to see.
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: Alternatives
+      description: Describe any alternatives you've considered.
+  - type: textarea
+    attributes:
+      label: Additional context

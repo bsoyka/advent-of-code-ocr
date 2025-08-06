@@ -121,7 +121,7 @@ def test_array_numpy() -> None:
         [1, 0, 0, 1, 0, 1, 0, 0, 1, 0, 1, 0, 0, 1],
         [1, 0, 0, 1, 0, 0, 1, 1, 0, 0, 0, 1, 1, 0],
     ])
-    assert convert_array_6(array, fill_pixel=1, empty_pixel=0) == 'AOC'
+    assert convert_array_6(array, fill_pixel=1, empty_pixel=0) == 'AOC'  # type: ignore[arg-type]
 
 
 @pytest.mark.parametrize('rows', [1, 5, 7, 10])

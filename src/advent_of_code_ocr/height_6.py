@@ -4,8 +4,8 @@ from __future__ import annotations
 
 from typing import TYPE_CHECKING, TypeVar
 
-from .characters import ALPHABET_6
-from .exceptions import IncorrectRowCountError, UnevenRowsError
+from advent_of_code_ocr.characters import ALPHABET_6
+from advent_of_code_ocr.exceptions import IncorrectRowCountError, UnevenRowsError
 
 if TYPE_CHECKING:
     from collections.abc import Sequence

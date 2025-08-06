@@ -1,5 +1,7 @@
 """Exceptions for the Advent of Code OCR library."""
 
+from __future__ import annotations
+
 
 class UnevenRowsError(ValueError):
     """Raised when the input has uneven rows."""

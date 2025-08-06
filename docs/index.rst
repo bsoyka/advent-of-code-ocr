@@ -1,5 +1,5 @@
 Advent of Code OCR
-=====
+==================
 
 **Advent of Code OCR** is a Python library that converts Advent of Code ASCII art letters to plain characters.
 

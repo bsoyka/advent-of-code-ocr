@@ -1,6 +1,6 @@
 repos:
   - repo: https://github.com/pre-commit/pre-commit-hooks
-    rev: cef0300fd0fc4d2a87a85fa2093c6b283ea36f4b  # frozen: v5.0.0
+    rev: 3e8a8703264a2f4a69428a0aa4dcb512790b2c8c  # frozen: v6.0.0
     hooks:
       - id: check-added-large-files
       - id: check-ast
@@ -19,14 +19,14 @@ repos:
           --markdown-linebreak-ext=md
         ]
   - repo: https://github.com/astral-sh/ruff-pre-commit
-    rev: 4cbc74d53fe5634e58e0e65db7d28939c9cec3f7  # frozen: v0.12.7
+    rev: 5ba58aca0bd5bc7c0e1c0fc45af2e88d6a2bde83  # frozen: v0.14.10
     hooks:
       - id: ruff-check
         args:
           - --fix
       - id: ruff-format
   - repo: https://github.com/astral-sh/uv-pre-commit
-    rev: 9eb8a5492241b44a52c8a0c9612cd46cbc69fb01  # frozen: 0.8.4
+    rev: 5ccbe86b8ad6bd7c28b6944a7553c075ae833637  # frozen: 0.9.21
     hooks:
       - id: uv-lock
 ci:

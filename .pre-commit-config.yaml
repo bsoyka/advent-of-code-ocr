@@ -19,14 +19,14 @@ repos:
           --markdown-linebreak-ext=md
         ]
   - repo: https://github.com/astral-sh/ruff-pre-commit
-    rev: 5ba58aca0bd5bc7c0e1c0fc45af2e88d6a2bde83  # frozen: v0.14.10
+    rev: 321478e58f4938179c6b86e4ddfa923d1547a49b  # frozen: v0.16.6
     hooks:
       - id: ruff-check
         args:
           - --fix
       - id: ruff-format
   - repo: https://github.com/astral-sh/uv-pre-commit
-    rev: 5ccbe86b8ad6bd7c28b6944a7553c075ae833637  # frozen: 0.9.21
+    rev: 7720020191168f707a43279c65b6bf9cdf7ed04e  # frozen: 0.12.10
     hooks:
       - id: uv-lock
 ci:

@@ -10,7 +10,7 @@ https://www.sphinx-doc.org/en/master/usage/configuration.html
 from advent_of_code_ocr import __version__
 
 project = 'Advent of Code OCR'
-copyright = '2025 Benjamin Soyka'  # noqa: A001
+copyright = '2025 Benjamin Soyka'  # ruff: ignore[builtin-variable-shadowing]
 author = 'Ben Soyka'
 release = __version__
 

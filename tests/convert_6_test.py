@@ -50,7 +50,7 @@ def test_different_characters(test_input: str, fill_char: str, empty_char: str) 
 def test_long_string() -> None:
     """Test conversion of a long string with multiple characters."""
     # Split into list of lines for readability/formatting
-    string = '\n'.join([  # noqa: FLY002
+    string = '\n'.join([  # ruff: ignore[static-join-to-f-string]
         '.##..###...##..####.####..##..#..#..###...##.#..#.#.....##..###..###...###.#..#.#...#####',
         '#..#.#..#.#..#.#....#....#..#.#..#...#.....#.#.#..#....#..#.#..#.#..#.#....#..#.#...#...#',
         '#..#.###..#....###..###..#....####...#.....#.##...#....#..#.#..#.#..#.#....#..#..#.#...#.',
@@ -74,7 +74,7 @@ def test_number_of_rows(rows: int) -> None:
 def test_strange_width_characters() -> None:
     """Test conversion with characters that have unusual widths."""
     # Split into list of lines for readability/formatting
-    string = '\n'.join([  # noqa: FLY002
+    string = '\n'.join([  # ruff: ignore[static-join-to-f-string]
         '####.####.####.#...##..#.####.###..####..###...##.',
         '#....#....#....#...##.#..#....#..#.#......#.....#.',
         '###..###..###...#.#.##...###..#..#.###....#.....#.',
